@@ -14,7 +14,7 @@ class Array
 	def filter_with_tag tags
 		tags.each do |tag|
 			self.select! do |item|
-				tag.in? item["tags"]
+				item["tags"].include? tag
 			end
 		end
 
